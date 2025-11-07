@@ -10,18 +10,7 @@ st.set_page_config(page_title="Air Quality Analytics & Visualization Dashboard -
 st.markdown("<h1 style='text-align:center;'> Air Quality Analytics & Visualization Dashboard - India</h1>", unsafe_allow_html=True)
 
 st.info("""
-This interactive dashboard provides a comprehensive overview of air quality across major Indian cities. 
-Built using Streamlit, Plotly, and PySpark, it integrates big data processing with real-time visualization 
-to help users explore pollution trends effortlessly.
-
-By combining Spark SQL’s distributed processing with rich, dynamic Plotly charts, this platform enables 
-fast, scalable insights into how various pollutants — including PM2.5, PM10, NO₂, SO₂, CO, and O₃ — 
-impact regional air quality.
-""")
-
-st.markdown("##  Project Overview")
-st.markdown("""
-The **Air Quality Prediction & Visualization** project is an end-to-end Big Data analytics platform 
+The Air Quality Prediction & Visualization project is an end-to-end Big Data analytics platform 
 that processes and visualizes large-scale air quality data using **Apache Spark**, **Plotly**, and **Streamlit**.
 It enables interactive exploration of pollution data, identifies regional air quality trends, 
 and presents findings through a visually appealing dashboard.
@@ -29,7 +18,6 @@ and presents findings through a visually appealing dashboard.
 The system demonstrates the power of distributed data processing in environmental analytics, 
 transforming raw sensor data into actionable insights.
 """)
-
 st.markdown("##  Data Sources")
 st.markdown("""
 Data is collected from multiple **air quality monitoring sensors** across India and contains:
@@ -43,11 +31,11 @@ The raw data undergoes cleaning, transformation, and aggregation using **PySpark
 
 st.markdown("##  Dashboard Features")
 st.markdown("""
-- ** City-wise Pollutant Distribution:** Compare pollutant averages across Indian cities.  
-- ** Interactive Air Quality Map:** Explore spatial patterns and identify pollution hotspots.  
-- ** Records Per City:** View the number of air quality readings available per location.  
-- ** Trend & Insights Tabs:** Gain quick insights into pollutant dominance and regional patterns.  
-- ** Big Data Integration:** Real-time data handling powered by Spark SQL for fast computation.  
+- City-wise Pollutant Distribution: Compare pollutant averages across Indian cities.  
+- Interactive Air Quality Map: Explore spatial patterns and identify pollution hotspots.  
+- Records Per City: View the number of air quality readings available per location.  
+- Trend & Insights Tabs: Gain quick insights into pollutant dominance and regional patterns.  
+- Big Data Integration: Real-time data handling powered by Spark SQL for fast computation.  
 """)
 
 
