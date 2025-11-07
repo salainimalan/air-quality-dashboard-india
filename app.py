@@ -5,48 +5,56 @@ import plotly.express as px
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-
-import streamlit as st
-
 st.set_page_config(
     page_title="Air Quality Analytics & Visualization Dashboard - India",
     layout="wide"
 )
 
-# ---- Centered layout container ----
+# ---- Centered Layout ----
 with st.container():
-    col1, col2, col3 = st.columns([0.15, 0.7, 0.15])  # middle column = 70% width
-    with col2:
-        st.markdown("<h1 style='text-align:center; font-weight:800;'>Air Quality Analytics & Visualization Dashboard - India</h1>", unsafe_allow_html=True)
+    left_space, main_col, right_space = st.columns([0.15, 0.7, 0.15])  # Center alignment
+    with main_col:
+        st.markdown(
+            "<h1 style='text-align:center; font-weight:800;'>Air Quality Analytics & Visualization Dashboard - India</h1>",
+            unsafe_allow_html=True,
+        )
+
         st.info("""
-        The **Air Quality Prediction & Visualization** project is an end-to-end **Big Data analytics platform** that processes and visualizes large-scale air quality data using **Apache Spark**, **Plotly**, and **Streamlit**.  
-        It enables interactive exploration of pollution data, identifies regional air quality trends, and presents findings through a visually appealing dashboard.  
-        The system demonstrates the power of **distributed data processing** in environmental analytics, transforming raw sensor data into actionable insights.
+        The **Air Quality Prediction & Visualization** project is an end-to-end **Big Data analytics platform**
+        built using **Apache Spark**, **Plotly**, and **Streamlit**.  
+        It enables interactive exploration of pollution levels, identifies regional air quality trends,
+        and presents findings through a visually engaging dashboard.  
+        This platform showcases the potential of **distributed data processing** for transforming raw environmental
+        sensor readings into meaningful, actionable insights.
         """)
 
-        st.markdown("## Data Sources")
-        st.markdown("""
-        Data is collected from multiple **air quality monitoring sensors** across India and contains:
+        # ---- Two-column layout for Data Sources & Features ----
+        col1, col2 = st.columns(2)
 
-        - **City & Location** metadata  
-        - **Timestamps** of recorded readings  
-        - Concentrations of **PM2.5, PM10, NO₂, SO₂, CO**, and **O₃**  
-        - Computed **Air Quality Index (AQI)** values  
+        with col1:
+            st.markdown("### 📊 Data Sources")
+            st.markdown("""
+            The dataset integrates information from multiple **air quality monitoring sensors** across India:
 
-        The raw data undergoes cleaning, transformation, and aggregation using **PySpark** before being visualized.
-        """)
+            - **City & Location** identifiers  
+            - **Timestamped readings** for accurate trend analysis  
+            - Concentrations of **PM2.5, PM10, NO₂, SO₂, CO**, and **O₃**  
+            - Calculated **Air Quality Index (AQI)** values  
+            - Cleaned and aggregated using **PySpark** for scalable analysis  
+            """)
 
-        st.markdown("## Dashboard Features")
-        st.markdown("""
-        - **City-wise Pollutant Distribution:** Compare pollutant averages across Indian cities  
-        - **Interactive Air Quality Map:** Explore spatial pollution patterns and hotspots  
-        - **Records Per City:** View the number of air quality readings available per location  
-        - **Trend & Insights Tabs:** Visualize pollutant dominance and seasonal variations  
-        - **Big Data Integration:** Real-time scalable analytics powered by **Spark SQL**
-        """)
+        with col2:
+            st.markdown("### ⚙️ Dashboard Features")
+            st.markdown("""
+            - **City-wise Pollutant Averages:** Compare pollution intensity across regions  
+            - **Interactive Map:** Explore real-time spatial AQI variations  
+            - **Data Volume Overview:** Check the number of records per city  
+            - **Trends & Patterns:** Visualize pollutant dominance and seasonal shifts  
+            - **Spark Integration:** Efficient large-scale data processing via **Spark SQL**  
+            """)
 
+        st.markdown("---")
 
-st.markdown("</div>", unsafe_allow_html=True)
 
 
 
