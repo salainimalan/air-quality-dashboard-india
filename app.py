@@ -12,7 +12,7 @@ st.set_page_config(
 
 # ---- Centered Layout ----
 with st.container():
-    left_space, main_col, right_space = st.columns([0.15, 0.7, 0.15])  # Center alignment
+    left_space, main_col, right_space = st.columns([0, 0.7, 0])  # Center alignment
     with main_col:
         st.markdown(
             "<h1 style='text-align:center; font-weight:800;'>Air Quality Analytics & Visualization Dashboard - India</h1>",
@@ -24,15 +24,14 @@ with st.container():
         built using **Apache Spark**, **Plotly**, and **Streamlit**.  
         It enables interactive exploration of pollution levels, identifies regional air quality trends,
         and presents findings through a visually engaging dashboard.  
-        This platform showcases the potential of **distributed data processing** for transforming raw environmental
-        sensor readings into meaningful, actionable insights.
+       .
         """)
 
-        # ---- Two-column layout for Data Sources & Features ----
+       
         col1, col2 = st.columns(2)
 
         with col1:
-            st.markdown("### 📊 Data Sources")
+            st.markdown("###  Data Sources")
             st.markdown("""
             The dataset integrates information from multiple **air quality monitoring sensors** across India:
 
@@ -44,7 +43,7 @@ with st.container():
             """)
 
         with col2:
-            st.markdown("### ⚙️ Dashboard Features")
+            st.markdown("###  Dashboard Features")
             st.markdown("""
             - **City-wise Pollutant Averages:** Compare pollution intensity across regions  
             - **Interactive Map:** Explore real-time spatial AQI variations  
