@@ -5,38 +5,67 @@ import plotly.express as px
 import matplotlib.pyplot as plt
 import seaborn as sns
 
+
 st.set_page_config(page_title="Air Quality Analytics & Visualization Dashboard - India", layout="wide")
 
-st.markdown("<h1 style='text-align:center;'> Air Quality Analytics & Visualization Dashboard - India</h1>", unsafe_allow_html=True)
+st.markdown("""
+    <style>
+        .centered-container {
+            max-width: 75%;
+            margin: 0 auto;
+            padding: 2rem 3rem;
+            background-color: rgba(240, 242, 246, 0.8);
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+        .title {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #1a4e80;
+            margin-bottom: 1rem;
+        }
+        .section-title {
+            color: #1a4e80;
+            margin-top: 2rem;
+        }
+        .stAlert {
+            background-color: rgba(26,78,128,0.1);
+        }
+    </style>
+""", unsafe_allow_html=True)
+
+st.markdown("<div class='centered-container'>", unsafe_allow_html=True)
+
+st.markdown("<h1 class='title'>Air Quality Analytics & Visualization Dashboard - India</h1>", unsafe_allow_html=True)
 
 st.info("""
-The Air Quality Prediction & Visualization project is an end-to-end Big Data analytics platform 
-that processes and visualizes large-scale air quality data using **Apache Spark**, **Plotly**, and **Streamlit**.
-It enables interactive exploration of pollution data, identifies regional air quality trends, 
-and presents findings through a visually appealing dashboard.
-
-The system demonstrates the power of distributed data processing in environmental analytics, 
-transforming raw sensor data into actionable insights.
+The **Air Quality Prediction & Visualization** project is an end-to-end **Big Data analytics platform** that processes and visualizes large-scale air quality data using **Apache Spark**, **Plotly**, and **Streamlit**.  
+It enables interactive exploration of pollution data, identifies regional air quality trends, and presents findings through a visually appealing dashboard.  
+The system demonstrates the power of **distributed data processing** in environmental analytics, transforming raw sensor data into actionable insights.
 """)
-st.markdown("##  Data Sources")
+
+st.markdown("### Data Sources", unsafe_allow_html=True)
 st.markdown("""
 Data is collected from multiple **air quality monitoring sensors** across India and contains:
--  **City & Location** metadata  
--  **Timestamps** of recorded readings  
--  Concentrations of **PM2.5**, **PM10**, **NO₂**, **SO₂**, **CO**, and **O₃**  
--  Computed **Air Quality Index (AQI)** values  
+- **City & Location** metadata  
+- **Timestamps** of recorded readings  
+- Concentrations of **PM2.5, PM10, NO₂, SO₂, CO**, and **O₃**  
+- Computed **Air Quality Index (AQI)** values  
 
 The raw data undergoes cleaning, transformation, and aggregation using **PySpark** before being visualized.
 """)
 
-st.markdown("##  Dashboard Features")
+st.markdown("### Dashboard Features", unsafe_allow_html=True)
 st.markdown("""
-- City-wise Pollutant Distribution: Compare pollutant averages across Indian cities.  
-- Interactive Air Quality Map: Explore spatial patterns and identify pollution hotspots.  
-- Records Per City: View the number of air quality readings available per location.  
-- Trend & Insights Tabs: Gain quick insights into pollutant dominance and regional patterns.  
-- Big Data Integration: Real-time data handling powered by Spark SQL for fast computation.  
+- **City-wise Pollutant Distribution:** Compare pollutant averages across Indian cities  
+- **Interactive Air Quality Map:** Explore spatial pollution patterns and hotspots  
+- **Records Per City:** View the number of air quality readings available per location  
+- **Trend & Insights Tabs:** Visualize pollutant dominance and seasonal variations  
+- **Big Data Integration:** Real-time scalable analytics powered by **Spark SQL**
 """)
+
+st.markdown("</div>", unsafe_allow_html=True)
 
 
 
