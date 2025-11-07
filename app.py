@@ -5,27 +5,17 @@ import plotly.express as px
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-st.set_page_config(page_title="Air Quality Analytics Dashboard (India)", layout="wide")
+st.set_page_config(page_title="Air Quality Analytics & Visualization Dashboard -India", layout="wide")
 
-st.markdown("<h1 style='text-align:center;'>🌏 Air Quality Analytics Dashboard (India)</h1>", unsafe_allow_html=True)
+st.markdown("<h1 style='text-align:center;'> Air Quality Analytics & Visualization Dashboard -India</h1>", unsafe_allow_html=True)
 st.info("""
-This dashboard analyzes **air quality across Indian cities** using historical data (2016–2025).  
-Explore pollutant trends, city-wise composition, correlations, and sensor distribution.
+This interactive dashboard provides a comprehensive overview of air quality across major Indian cities. Built using Streamlit, Plotly, and PySpark, it integrates big data processing with real-time visualization to help users explore pollution trends effortlessly.
+The dashboard displays pollutant composition, spatial air quality patterns, and detailed pollutant averages for each city, derived from large-scale sensor data.
+By combining Spark SQL’s distributed processing with rich, dynamic Plotly charts, this platform enables fast, scalable insights into how various pollutants — including PM2.5, PM10, NO₂, SO₂, CO, and O₃ — impact regional air quality.
 """)
 
-uploaded_file = st.file_uploader("📂 Upload a dataset (CSV)", type=["csv"], help="Optional: Upload a different dataset to visualize")
-if uploaded_file is not None:
-    df = pd.read_csv(uploaded_file)
-else:
-    if not os.path.exists("combined.csv"):
-        st.error("⚠️ The file 'combined.csv' was not found. Please upload a dataset or ensure it's in the same directory.")
-        st.stop()
 
-    @st.cache_data
-    def load_data():
-        return pd.read_csv("combined.csv")
-
-    df = load_data()
+df = pd.read_csv("combined.csv")
 
 tab1, tab2, tab3, tab4, tab5, tab6, tab7 = st.tabs([
     "Records & Sensors", "Maps", "City Pollutant Levels",
