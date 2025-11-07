@@ -12,7 +12,7 @@ st.set_page_config(
 
 # ---- Centered Layout ----
 with st.container():
-    left_space, main_col, right_space = st.columns([0, 0.7, 0])  # Center alignment
+    left_space, main_col, right_space = st.columns([0.01, 0.7, 0.01])  # Center alignment
     with main_col:
         st.markdown(
             "<h1 style='text-align:center; font-weight:800;'>Air Quality Analytics & Visualization Dashboard - India</h1>",
