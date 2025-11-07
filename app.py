@@ -33,7 +33,7 @@ with st.container():
         with col1:
             st.markdown("###  Data Sources")
             st.markdown("""
-            The dataset integrates information from multiple **air quality monitoring sensors** across India:
+             Integrates information from multiple **air quality monitoring sensors** across India:
 
             - **City & Location** identifiers  
             - **Timestamped readings** for accurate trend analysis  
