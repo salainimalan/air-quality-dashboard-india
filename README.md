@@ -1,4 +1,4 @@
-# 🌍 Air Quality Analytics Dashboard (India)
+#  Air Quality Analytics Dashboard (India)
 
 ![Python](https://img.shields.io/badge/Python-3.9%2B-blue)
 ![Streamlit](https://img.shields.io/badge/Streamlit-%F0%9F%94%A5-red)
