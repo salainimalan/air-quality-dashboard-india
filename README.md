@@ -34,7 +34,7 @@
  **City Comparisons** – Top polluted cities, pollutant correlations  
  **ML Forecasting Ready** – Extendable for predictive analytics  
 
----
+----
 
 ##  Tech Stack
 
